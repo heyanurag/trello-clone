@@ -1,3 +1,11 @@
-export default function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
-}
+import NavBar from "./components/Navbar";
+
+const App = () => {
+  return (
+    <div className="flex h-screen max-h-screen w-screen flex-col overflow-scroll bg-zinc-900 text-gray-50">
+      <NavBar />
+    </div>
+  );
+};
+
+export default App;
