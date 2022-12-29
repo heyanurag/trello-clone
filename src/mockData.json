@@ -1,0 +1,70 @@
+[
+  {
+    "id": "1",
+    "stage": "To Do",
+    "tasks": [
+      {
+        "id": "1",
+        "title": "Building A Better Burrito: 7 Layers To Success",
+        "description": "Description 1"
+      },
+      {
+        "id": "2",
+        "title": "Nacho Ordinary Birthday - Event Space Rentals",
+        "description": "Description 2"
+      },
+      {
+        "id": "3",
+        "title": "Taco Drone Delivery Service",
+        "description": "Description 3"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "stage": "Doing",
+    "tasks": [
+      {
+        "id": "4",
+        "title": "The Taco Truck World Tour",
+        "description": "Description 4"
+      },
+      {
+        "id": "5",
+        "title": "Operation 'Awesome Sauce' - A Recipe For Success",
+        "description": "Description 5"
+      },
+      {
+        "id": "6",
+        "title": "#NoFilter - Instagram Campaign",
+        "description": "Description 6"
+      },
+      {
+        "id": "8",
+        "title": "Global Franchise Opportunities",
+        "description": "Description 8"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "stage": "Done",
+    "tasks": [
+      {
+        "id": "7",
+        "title": "Update Yelp Listing",
+        "description": "Description 7"
+      },
+      {
+        "id": "9",
+        "title": "New Swag: Socks, Scarves & Salsa",
+        "description": "Description 9"
+      },
+      {
+        "id": "10",
+        "title": "Eco Friendly Utensils & Napkins",
+        "description": "Description 10"
+      }
+    ]
+  }
+]
