@@ -1,5 +1,8 @@
 # Taco Trello
 
+Tech Used:
+ReactJS, TailwindCSS, ViteJS (Frontend tooling), NanoID (For generating random IDs), react-beautiful-dnd (for drag/drop functionality)
+
 Questions & Answers:
 
 Q1: Add/Delete/Edit new stage
