@@ -10,7 +10,7 @@ const Task = (props) => {
 
   return (
     <div
-      className="my-3 flex flex-col rounded-md bg-zinc-500 p-4 shadow-md"
+      className="my-3 flex flex-col rounded-sm bg-zinc-500 p-4 shadow-md"
       {...props}
       onClick={() => {
         setExpanded((prev) => !prev);

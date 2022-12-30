@@ -4,20 +4,6 @@ import { DragDropContext, Droppable } from "react-beautiful-dnd";
 import Stage from "../Stage";
 
 const Board = ({ data, setData }) => {
-  const addTaskHandler = (NewTask) => {
-    setData((prev) => {
-      console.log({ prev, NewTask });
-      const newStages = prev.map((stage) => {
-        if (stage.id === NewTask.stageIndex) {
-          stage.tasks.push(NewTask.task);
-        }
-        return stage;
-      });
-      console.log({ newStages });
-      return newStages;
-    });
-  };
-
   const onDragEnd = (result) => {
     if (!result.destination) return;
     const { source, destination } = result;
@@ -52,32 +38,19 @@ const Board = ({ data, setData }) => {
     }
   };
 
-  const deleteStage = (stageID) => {
-    setData((prev) => {
-      const newStages = prev.filter((stage) => stage.id !== stageID);
-      console.log(newStages);
-      return newStages;
-    });
-  };
-
   return (
     <div className="flex h-full w-full flex-row pt-8">
       <DragDropContext onDragEnd={onDragEnd}>
         <div className="flex h-full min-w-full overflow-scroll">
-          {data.map((stage, index) => (
+          {data.map((stage, idx) => (
             <Droppable key={stage.id} droppableId={stage.id}>
               {(provided) => (
                 <div
                   ref={provided.innerRef}
                   {...provided.droppableProps}
-                  className="m-4 flex h-max w-full min-w-[25vw] flex-col rounded-md bg-zinc-700 px-4 py-4"
+                  className="m-4 flex h-max w-full min-w-[20vw] flex-col rounded-sm bg-zinc-700 px-4 py-4"
                 >
-                  <Stage
-                    stage={stage}
-                    index={index}
-                    addTaskHandler={addTaskHandler}
-                    deleteStage={deleteStage}
-                  />
+                  <Stage stage={stage} setData={setData} />
                   {provided.placeholder}
                 </div>
               )}

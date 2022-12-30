@@ -4,21 +4,34 @@ import { BsDashCircle } from "react-icons/bs";
 import AddTask from "../Task/AddTask";
 import Task from "../Task";
 
-const Stage = ({ stage, index, addTaskHandler, deleteStage }) => {
+const Stage = ({ stage, setData }) => {
   const [addTaskFormOpen, setAddTaskFormOpen] = useState(false);
 
-  const handleAddTask = (newTask) => {
-    addTaskHandler(newTask);
+  const addTaskHandler = (newTask) => {
+    setData((prev) => {
+      const newStages = prev.map((stage) => {
+        if (stage.id === newTask.stageIndex) {
+          stage.tasks.push(newTask.task);
+        }
+        return stage;
+      });
+      return newStages;
+    });
     setAddTaskFormOpen(false);
   };
 
-  const handleDeleteStage = () => deleteStage(stage.id);
+  const deleteStage = () => {
+    setData((prev) => {
+      const newStages = prev.filter((stg) => stg.id !== stage.id);
+      return newStages;
+    });
+  };
 
   return (
     <>
       <div className="mb-3 flex flex-row items-center justify-between">
         <span className="text-lg font-semibold">{stage.stage}</span>
-        <button onClick={handleDeleteStage}>
+        <button onClick={deleteStage}>
           <BsDashCircle />
         </button>
       </div>
@@ -45,12 +58,12 @@ const Stage = ({ stage, index, addTaskHandler, deleteStage }) => {
           setAddTaskFormOpen(true);
         }}
       >
-        Add Task
+        Add Card
       </div>
       {addTaskFormOpen && (
         <AddTask
           setAddTaskFormOpen={setAddTaskFormOpen}
-          addTaskHandler={handleAddTask}
+          addTaskHandler={addTaskHandler}
           stageIndex={stage.id}
         />
       )}

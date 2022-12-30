@@ -1,27 +1,53 @@
 [
   {
     "id": "1",
-    "stage": "To Do",
+    "stage": "Resources",
     "tasks": [
       {
         "id": "1",
-        "title": "Building A Better Burrito: 7 Layers To Success",
+        "title": "Financials & Growth Data",
         "description": "Description 1"
       },
       {
         "id": "2",
-        "title": "Nacho Ordinary Birthday - Event Space Rentals",
+        "title": "2023 Goals and KPIs",
         "description": "Description 2"
       },
       {
         "id": "3",
-        "title": "Taco Drone Delivery Service",
+        "title": "Brand Guide",
         "description": "Description 3"
+      },
+      {
+        "id": "14",
+        "title": "Employee Manual",
+        "description": "Description 14"
       }
     ]
   },
   {
     "id": "2",
+    "stage": "To Do",
+    "tasks": [
+      {
+        "id": "11",
+        "title": "Building A Better Burrito: 7 Layers To Success",
+        "description": "Description 11"
+      },
+      {
+        "id": "12",
+        "title": "Nacho Ordinary Birthday - Event Space Rentals",
+        "description": "Description 12"
+      },
+      {
+        "id": "13",
+        "title": "Taco Drone Delivery Service",
+        "description": "Description 13"
+      }
+    ]
+  },
+  {
+    "id": "3",
     "stage": "Doing",
     "tasks": [
       {
@@ -47,7 +73,7 @@
     ]
   },
   {
-    "id": "3",
+    "id": "4",
     "stage": "Done",
     "tasks": [
       {
